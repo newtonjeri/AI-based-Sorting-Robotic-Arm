@@ -1,0 +1,30 @@
+<?xml version="1.0" ?>
+
+<robot xmlns:xacro="http://wiki.ros.org/xacro">
+    <!-- Import r6bot macro -->
+  <link name = "aruco_link">
+    <visual>
+        <origin xyz="0 0 0.002" rpy="0 0 0"/>
+        <geometry>
+            <mesh filename = "package://robotic_arm_description/meshes/Aruco-Cube.dae"/>
+        </geometry>
+    </visual>
+
+    <collision>
+        <origin xyz="0 0 0.002" rpy="0 0 0"/>
+        <geometry>
+            <mesh filename = "package://robotic_arm_description/meshes/Aruco-Cube.stl"/>
+        </geometry>
+    </collision>
+    <inertial>
+      <mass value = "0.0028"/>
+      <inertia ixx = "1.6e-9" ixy = "-1.2e-10" ixz = "-1.2e-10" iyy = "-1.6e-9" iyz = "-1.2e-10" izz = "2.3e-11"/>
+    </inertial>
+  </link>
+
+  <joint name = "aruco_world" type = "fixed">
+    <parent link = "world"/>
+    <child link = "aruco_link"/>
+    <origin rpy = "0 0 0" xyz = "0.283 -0.200 0.035"/>
+  </joint>
+</robot>

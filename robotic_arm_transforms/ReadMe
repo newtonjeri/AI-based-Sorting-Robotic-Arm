@@ -1,0 +1,16 @@
+cd ros_ws/src/ai_sorting/src/
+colcon build
+source install/setup.bash
+ros2 launch robotic_arm_description robot_arm_gazebo.launch.py
+
+source ros_ws/src/ai_sorting/install/setup.bash
+ros2 launch robotic_arm_controllers robot_arm_controllers.launch.py
+ros2 run robotic_arm_transforms transformer
+
+
+source ros_ws/src/ai_sorting/install/setup.bash
+ros2 launch robotic_arm_recognition robotic_arm_recognition_model.launch.py
+
+
+source ros_ws/src/ai_sorting/install/setup.bash
+ros2 run robotic_arm_transforms get

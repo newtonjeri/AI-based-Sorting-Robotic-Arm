@@ -1,0 +1,45 @@
+controller_manager:
+  ros__parameters:
+    update_rate: 1000
+
+    robotic_arm_joint_trajectory_controller:
+      type: joint_trajectory_controller/JointTrajectoryController
+
+    # gripper_controller:
+    #   type: forward_command_controller/ForwardCommandController
+
+    joint_state_broadcaster:
+      type: joint_state_broadcaster/JointStateBroadcaster
+
+# Robot joints trajectory controllers
+robotic_arm_joint_trajectory_controller:
+  ros__parameters:
+    joints:
+      - base_waist_joint
+      - waist_link1_joint
+      - link1_link2_joint
+      - link2_gripper_base_joint
+      - right_gripper_joint
+    
+    interface_name: position
+    command_interfaces:
+      - position
+    state_interfaces:
+      - position
+
+    open_loop_control: true
+    allow_integration_in_goal_trajectories: true
+
+ #   stop_trajectory_duration: 10.0
+
+# # Gripper controller
+# gripper_controller:
+#   ros__parameters:
+#     joints:
+#       - right_gripper_joint
+      
+#     interface_name: position
+
+
+
+  

@@ -1,0 +1,5 @@
+<launch>
+<!-- write function to launch two nodes in the robotic_arm_transform packege i.e. transforms and get-->
+<node pkg="robotic_arm_transforms" exec="transformer"> </node>
+<node pkg="robotic_arm_transforms" exec="get"> </node>s
+</launch>

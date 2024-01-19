@@ -1,0 +1,70 @@
+<?xml version="1.0" ?>
+<robot name="robotic_arm" xmlns:xacro="http://www.ros.org/wiki/xacro" >
+
+<transmission name="base_waist_joint_tran">
+  <type>transmission_interface/SimpleTransmission</type>
+  <joint name="base_waist_joint">
+    <hardwareInterface>hardware_interface/EffortJointInterface</hardwareInterface>
+  </joint>
+  <actuator name="base_waist_joint_actr">
+    <hardwareInterface>hardware_interface/EffortJointInterface</hardwareInterface>
+    <mechanicalReduction>1</mechanicalReduction>
+  </actuator>
+</transmission>
+
+<transmission name="waist_link1_joint_tran">
+  <type>transmission_interface/SimpleTransmission</type>
+  <joint name="waist_link1_joint">
+    <hardwareInterface>hardware_interface/EffortJointInterface</hardwareInterface>
+  </joint>
+  <actuator name="waist_link1_joint_actr">
+    <hardwareInterface>hardware_interface/EffortJointInterface</hardwareInterface>
+    <mechanicalReduction>1</mechanicalReduction>
+  </actuator>
+</transmission>
+
+<transmission name="link1_link2_joint_tran">
+  <type>transmission_interface/SimpleTransmission</type>
+  <joint name="link1_link2_joint">
+    <hardwareInterface>hardware_interface/EffortJointInterface</hardwareInterface>
+  </joint>
+  <actuator name="link1_link2_joint_actr">
+    <hardwareInterface>hardware_interface/EffortJointInterface</hardwareInterface>
+    <mechanicalReduction>1</mechanicalReduction>
+  </actuator>
+</transmission>
+
+<transmission name="link2_gipper_base_joint_tran">
+  <type>transmission_interface/SimpleTransmission</type>
+  <joint name="link2_gipper_base_joint">
+    <hardwareInterface>hardware_interface/EffortJointInterface</hardwareInterface>
+  </joint>
+  <actuator name="link2_gipper_base_joint_actr">
+    <hardwareInterface>hardware_interface/EffortJointInterface</hardwareInterface>
+    <mechanicalReduction>1</mechanicalReduction>
+  </actuator>
+</transmission>
+
+<transmission name="right_gripper_joint_tran">
+  <type>transmission_interface/SimpleTransmission</type>
+  <joint name="right_gripper_joint">
+    <hardwareInterface>hardware_interface/EffortJointInterface</hardwareInterface>
+  </joint>
+  <actuator name="right_gripper_joint_actr">
+    <hardwareInterface>hardware_interface/EffortJointInterface</hardwareInterface>
+    <mechanicalReduction>1</mechanicalReduction>
+  </actuator>
+</transmission>
+
+<transmission name="left_gripper_joint_tran">
+  <type>transmission_interface/SimpleTransmission</type>
+  <joint name="left_gripper_joint">
+    <hardwareInterface>hardware_interface/EffortJointInterface</hardwareInterface>
+  </joint>
+  <actuator name="left_gripper_joint_actr">
+    <hardwareInterface>hardware_interface/EffortJointInterface</hardwareInterface>
+    <mechanicalReduction>1</mechanicalReduction>
+  </actuator>
+</transmission>
+
+</robot>
